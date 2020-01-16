@@ -187,7 +187,8 @@ abstract class BasePicker<P extends BasePickerProps> extends React.Component<P, 
     const nextSelectableCellPositionLeft = selectableCells
       .slice(0, selectableCells.indexOf(this.state.hoveredCellPosition))
       .pop();
-    const nextSelectableCellPositionRight = selectableCells.slice(selectableCells.indexOf(this.state.hoveredCellPosition) + 1)[0];
+    const nextSelectableCellPositionRight =
+      selectableCells.slice(selectableCells.indexOf(this.state.hoveredCellPosition) + 1)[0];
     switch (key) {
       case 'Left':
       case 'ArrowLeft':

@@ -160,7 +160,11 @@ export function getMarkedDays(marked: Moment[], currentDate: Moment, daysOnPage:
 }
 
 /** Return day positions that should contain dots. */
-export function getDottedDays(dots: Array<{ dates: Moment[]; color: string }>, currentDate: Moment, daysOnPage: number): object[] {
+export function getDottedDays(
+    dots: Array<{ dates: Moment[]; color: string }>,
+    currentDate: Moment,
+    daysOnPage: number,
+  ): object[] {
   if (dots.length === 0) {
     return [];
   }

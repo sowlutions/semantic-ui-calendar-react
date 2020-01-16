@@ -230,7 +230,15 @@ class DateInput extends BaseInput<DateInputProps, DateInputState> {
       return <MonthPicker {...pickerProps} hasHeader disable={getDisabledMonths(disableParsed)} />;
     }
 
-    return <DayPicker {...pickerProps} disable={disableParsed} marked={markedParsed} markColor={markColor} dots={dotsParsed} />;
+    return (
+      <DayPicker
+        {...pickerProps}
+        disable={disableParsed}
+        marked={markedParsed}
+        markColor={markColor}
+        dots={dotsParsed}
+      />
+    );
   }
 
   private switchToNextModeUndelayed = (): void => {

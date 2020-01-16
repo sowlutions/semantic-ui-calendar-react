@@ -341,7 +341,12 @@ function getDatesFromNextMonth(date, allDays, nextMonthStartPosition) {
 }
 
 /** Build moment based on current page and date position on that page. */
-function buildMoment(pageReferenceDate: Moment, firstOnPage: number, dateToBuildPosition: number, localization: string): Moment {
+function buildMoment(
+    pageReferenceDate: Moment,
+    firstOnPage: number,
+    dateToBuildPosition: number,
+    localization: string,
+  ): Moment {
   let result;
   if (firstOnPage === 1 /* page starts from first day in month */) {
     const dateOptions = {

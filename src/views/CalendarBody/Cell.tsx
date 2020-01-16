@@ -86,10 +86,10 @@ class Cell extends React.Component<CellProps, any> {
             {content}
           </Label>
         ) : (
-          <span className="suicr-content-item">{content}</span>
+          <span className='suicr-content-item'>{content}</span>
         )}
         {dots && !!dots.length && (
-          <div style={dotContainerStyles} className="suicr-dots-container">
+          <div style={dotContainerStyles} className='suicr-dots-container'>
             {dots.map((dot, index) => (
               <div key={`dot-${index}-${dot.color}`} className={`suicr-dot ui label ${dot.color}`} style={dotStyles} />
             ))}
@@ -99,15 +99,15 @@ class Cell extends React.Component<CellProps, any> {
     );
   }
 
-  private onCellClick = event => {
+  private onCellClick = (event) => {
     const { itemPosition, content } = this.props;
     invoke(this.props, 'onClick', event, { ...this.props, itemPosition, value: content });
-  };
+  }
 
-  private onCellHover = event => {
+  private onCellHover = (event) => {
     const { itemPosition } = this.props;
     invoke(this.props, 'onHover', event, { ...this.props, itemPosition });
-  };
+  }
 }
 
 export default Cell;

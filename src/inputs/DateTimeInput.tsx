@@ -33,7 +33,14 @@ import BaseInput, {
 } from './BaseInput';
 
 import { tick } from '../lib';
-import { parseArrayOrValue, parseValue, TIME_FORMAT, buildValue, dateValueToString, parseArrayOfObjects } from './parse';
+import {
+  parseArrayOrValue,
+  parseValue,
+  TIME_FORMAT,
+  buildValue,
+  dateValueToString,
+  parseArrayOfObjects,
+} from './parse';
 import { getDisabledMonths, getDisabledYears } from './shared';
 
 type CalendarMode = 'year' | 'month' | 'day' | 'hour' | 'minute';
@@ -260,7 +267,15 @@ class DateTimeInput extends BaseInput<DateTimeInputProps, DateTimeInputState> {
       return <MonthPicker {...pickerProps} hasHeader disable={getDisabledMonths(disableParsed)} />;
     }
     if (mode === 'day') {
-      return <DayPicker {...pickerProps} marked={markedParsed} markColor={markColor} dots={dotsParsed} disable={disableParsed} />;
+      return (
+        <DayPicker
+          {...pickerProps}
+          marked={markedParsed}
+          markColor={markColor}
+          dots={dotsParsed}
+          disable={disableParsed}
+        />
+      );
     }
     if (mode === 'hour') {
       return <HourPicker timeFormat={this.props.timeFormat} hasHeader {...pickerProps} disable={disableParsed} />;

@@ -172,7 +172,11 @@ interface Range {
  * @param {string} dateFormat Moment formatting string
  * @param {string} inputSeparator Separator for split inputString
  */
-export function parseDatesRange(inputString: string = '', dateFormat: string = '', inputSeparator: string = ' - '): Range {
+export function parseDatesRange(
+    inputString: string = '',
+    dateFormat: string = '',
+    inputSeparator: string = ' - ',
+  ): Range {
   const dates = inputString.split(inputSeparator).map((date) => cleanDate(date, dateFormat));
   const result: Range = {};
   let start;

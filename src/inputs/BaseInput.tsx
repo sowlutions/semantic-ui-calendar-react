@@ -126,7 +126,10 @@ export interface MarkedValuesProps {
 
 export const MarkedValuesPropTypes = {
   /** Array of marked dates. */
-  marked: PropTypes.oneOfType([PropTypes.arrayOf(CustomPropTypes.momentObj), PropTypes.arrayOf(CustomPropTypes.dateObject)]),
+  marked: PropTypes.oneOfType([
+    PropTypes.arrayOf(CustomPropTypes.momentObj),
+    PropTypes.arrayOf(CustomPropTypes.dateObject),
+  ]),
   /** String specifying the mark color (Optional). */
   markColor: PropTypes.string,
 };
