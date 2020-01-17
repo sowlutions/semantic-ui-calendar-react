@@ -11,16 +11,20 @@ const hoverCellStyles = {
   cursor: 'pointer',
 };
 
+const wrapProperty: 'wrap' = 'wrap';
+
 const dotContainerStyles = {
   display: 'flex',
   justifyContent: 'center',
   marginTop: '0.3rem',
+  flexWrap: wrapProperty,
 };
 
 const dotStyles = {
   width: '0.5em',
   height: '0.5em',
   padding: '0',
+  margin: '0.1em',
 };
 
 export interface DotObject {

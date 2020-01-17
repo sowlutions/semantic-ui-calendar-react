@@ -50,15 +50,18 @@ var hoverCellStyles = {
     outline: '1px solid #85b7d9',
     cursor: 'pointer',
 };
+var wrapProperty = 'wrap';
 var dotContainerStyles = {
     display: 'flex',
     justifyContent: 'center',
     marginTop: '0.3rem',
+    flexWrap: wrapProperty,
 };
 var dotStyles = {
     width: '0.5em',
     height: '0.5em',
     padding: '0',
+    margin: '0.1em',
 };
 exports.cellStyleWidth3 = {
     width: '33.333333%',

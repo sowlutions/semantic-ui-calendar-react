@@ -18,9 +18,6 @@
     "build:example": "yarn test && yarn lint && yarn webpack --production",
     "lint": "yarn tslint src/**"
   },
-  "precommit": [
-    "build"
-  ],
   "keywords": [
     "semantic",
     "react",
